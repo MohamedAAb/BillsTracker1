@@ -10,6 +10,10 @@ import javax.persistence.Query;
 import com.billstracker9.entities.Payee;
 import com.billstracker9.entities.User;
 
+/**
+ * @author Mohamed Abouregila
+ *
+ */
 public class PayeeDaoImpl implements PayeeDao {
 	 final String persistenceUnitName = "billstracker9";
 
