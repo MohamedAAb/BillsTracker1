@@ -7,6 +7,10 @@ import com.billstracker9.entities.Account;
 import com.billstracker9.entities.Transaction;
 import com.billstracker9.entities.User;
 
+/**
+ * @author Mohamed Abouregila
+ *
+ */
 public interface TransactionDao {
 	public int addTransaction(Transaction transaction);
 	public List<Transaction> findTransactionsByAccount(Account account);
