@@ -14,15 +14,11 @@ public class AppMain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//UserDaoImpl userDaoImpl=new UserDaoImpl();
-		//System.out.println("UpDate SessionId: "+userDaoImpl.updateUserSessionId("mohammedmon3m@yahoo.com", "111111111"));
-		//System.out.println("Right after UpDate SessionId: "+userDaoImpl.findByUserEmail("mohammedmon3m@yahoo.com"));
+
 		System.out.println("Calendar"+Calendar.getInstance().getTime());
 		
 		
-		
-		
-		
+				
 
 	}
 
