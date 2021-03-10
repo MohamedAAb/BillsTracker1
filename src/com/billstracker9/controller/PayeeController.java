@@ -11,6 +11,11 @@ import org.springframework.web.servlet.ModelAndView;
 import com.billstracker9.entities.Payee;
 import com.billstracker9.services.PayeeService;
 
+/**
+ * @author Mohamed Abouregila
+ *
+ *this controller where the requests of(user login/payee/new payee/addpayee) get mapped to
+ */
 @Controller
 @SessionAttributes("userLogin")
 public class PayeeController {
