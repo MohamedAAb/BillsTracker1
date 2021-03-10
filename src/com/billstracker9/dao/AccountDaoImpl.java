@@ -11,12 +11,15 @@ import com.billstracker9.entities.Account;
 import com.billstracker9.entities.Payee;
 import com.billstracker9.entities.User;
 
+/**
+ * @author Mohamed Abouregila
+ *
+ */
 public class AccountDaoImpl implements AccountDao {
 	 final String persistenceUnitName = "billstracker9";
 
 	@Override
 	public int addAccount(Account account) {
-		// TODO Auto-generated method stub
 		int result = 0;
 		
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory(persistenceUnitName);
@@ -26,7 +29,6 @@ public class AccountDaoImpl implements AccountDao {
 			entityManager.getTransaction().begin();
 			entityManager.persist(account);    // insert into offices .....
 			
-			// ADD MORE BUSINESS LOGIC
 			
 			
 			entityManager.getTransaction().commit();
