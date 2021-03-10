@@ -21,6 +21,10 @@ import com.billstracker9.services.UserServices;
 
 
 
+/**
+ * @author Mohamed Abouregila
+ *
+ */
 @Controller
 @SessionAttributes("userLogin")
 public class UserController {
@@ -33,14 +37,14 @@ public class UserController {
 	PayeeService payeeService=new PayeeService();
 	TransactionService transactionService=new TransactionService();
 
-
-	// nav main menu
 	
+	//this method handles the home request
 	@RequestMapping("/")
 	public String indexHandler() {
 		return "login";  //jsp
 	}
 	
+	//this handles login request
 	 @RequestMapping(value = "/login", method = RequestMethod.POST)
 	    public ModelAndView login(@ModelAttribute() User user, @SessionAttribute("userLogin") User userSession, Model model) {
 		 	System.out.println();
@@ -56,7 +60,6 @@ public class UserController {
 		 		userSession.setfName(foundUser.getfName());
 		 		model.addAttribute("userEmail", user.getEmail());
 		 		mav.addObject("user", user);
-		 		//System.out.println("login Handler User: "+user);
 		 		List<Transaction> dueSoonBillList = transactionService.getDueSoonBills(foundUser);
 				System.out.println(" Transaction list : "+dueSoonBillList);
 				mav.addObject("dueSoonBillList", dueSoonBillList);
@@ -91,7 +94,6 @@ public class UserController {
 		 		userSession.setfName(foundUser.getfName());
 		 		model.addAttribute("userEmail", user.getEmail());
 		 		mav.addObject("user", user);
-		 		//System.out.println("login Handler User: "+user);
 		 		List<Transaction> dueSoonBillList = transactionService.getDueSoonBills(foundUser);
 				System.out.println(" Transaction list : "+dueSoonBillList);
 				mav.addObject("dueSoonBillList", dueSoonBillList);
@@ -133,7 +135,19 @@ public class UserController {
 	        return "signup";
 	    }
 	 
-	 @RequestMapping(value = "/addUser")
+	 /**
+	 * @param user
+	 * @param bindingResult
+	 * @param model
+	 * @return
+	 */
+	/**
+	 * @param user
+	 * @param bindingResult
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping(value = "/addUser")
 	    public ModelAndView registration(@ModelAttribute() User user, BindingResult bindingResult, Model model) {
 	      //  userValidator.validate(userForm, bindingResult);
 		 	ModelAndView mav = new ModelAndView();
@@ -159,7 +173,6 @@ public class UserController {
 			mav.setViewName(view); // jsp
 			return mav;
 
-	        //securityService.autologin(userForm.getUsername(), userForm.getPasswordConfirm());
 
 	    }
 	 
