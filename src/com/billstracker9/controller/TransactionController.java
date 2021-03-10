@@ -21,6 +21,12 @@ import com.billstracker9.services.PayeeService;
 import com.billstracker9.services.TransactionService;
 import com.billstracker9.services.UserServices;
 
+/**
+ * @author Mohamed Abouregila
+ * 
+ * all transactions requests get mapped to this controller
+ *
+ */
 @Controller
 @SessionAttributes("userLogin")
 public class TransactionController{
