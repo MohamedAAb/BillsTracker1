@@ -5,6 +5,10 @@ import java.util.List;
 import com.billstracker9.entities.Payee;
 import com.billstracker9.entities.User;
 
+/**
+ * @author Mohamed Abouregila
+ *
+ */
 public interface PayeeDao {
 
 	public int addPayee(Payee payee);
